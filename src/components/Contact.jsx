@@ -1,34 +1,70 @@
-import React from 'react';
-import { HiArrowNarrowRight } from 'react-icons/hi';
+import React, { useState } from "react";
 
-const Home = () => {
+const FORM_ENDPOINT = ""; // TODO - fill on the later step
+
+const Contact = () => {
+  const [submitted, setSubmitted] = useState(false);
+  const handleSubmit = () => {
+    setTimeout(() => {
+      setSubmitted(true);
+    }, 100);
+  };
+
+  if (submitted) {
+    return (
+      <>
+        <div className="text-2xl">Thank you!</div>
+        <div className="text-md">We'll be in touch soon.</div>
+      </>
+    );
+  }
+
   return (
-    <div name='home' className='w-full h-screen bg-[#0a192f]'>
-      {/* Container */}
-      <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
-        <p className='text-pink-600'>Hi, my name is</p>
-        <h1 className='text-4xl sm:text-7xl font-bold text-[#ccd6f6]'>
-          Clint Briley
-        </h1>
-        <h2 className='text-4xl sm:text-7xl font-bold text-[#8892b0]'>
-          I'm a Full Stack Developer.
-        </h2>
-        <p className='text-[#8892b0] py-4 max-w-[700px]'>
-          I’m a full-stack developer specializing in building (and occasionally
-          designing) exceptional digital experiences. Currently, I’m focused on
-          building responsive full-stack web applications.
-        </p>
-        <div>
-          <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600'>
-            View Work
-            <span className='group-hover:rotate-90 duration-300'>
-              <HiArrowNarrowRight className='ml-3 ' />
-            </span>
-          </button>
-        </div>
+    <div className="bg-[#0a192f]">
+    <form
+      action={FORM_ENDPOINT}
+      onSubmit={handleSubmit}
+      method="POST"
+      target="_blank"
+      className="mx-[6rem] "
+    >
+      <div className="mb-3 pt-0  ">
+        <input
+          type="text"
+          placeholder="Your name"
+          name="name"
+          className="px-3 py-3 placeholder-gray-400 text-gray-600 relative rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
+          required
+        />
       </div>
+      <div className="mb-3 pt-0">
+        <input
+          type="email"
+          placeholder="Email"
+          name="email"
+          className="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
+          required
+        />
+      </div>
+      <div className="mb-3 pt-0">
+        <textarea
+          placeholder="Your message"
+          name="message"
+          className="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
+          required
+        />
+      </div>
+      <div className="mb-3 pt-0">
+        <button
+          className="bg-blue-500 text-white active:bg-blue-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          type="submit"
+        >
+          Send a message
+        </button>
+      </div>
+    </form>
     </div>
   );
 };
 
-export default Home;
+export default Contact;
