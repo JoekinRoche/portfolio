@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div >
         <video src={BG} autoPlay loop muted ></video>
-        <div name='home' className='w-full h-screen'>
+        <div name='home' className='w-full h-screen home'>
         
       {/* Container */}
       <div className='content d-flex flex-col justify-center h-full'>
@@ -15,7 +15,7 @@ const Home = () => {
         <Navbar/>
         </div>
       <div className='max-w-[1000px] mx-auto px-8 mt-[7rem] '>
-        <p className='text-pink-600'>Hi, my name is</p>
+        <p className='text-[#3c5964]'>Hi, my name is</p>
         <h1 className='text-5xl sm:text-7xl font-bold text-[#293d43]'>
           Joekin Roche
         </h1>
