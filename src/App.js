@@ -6,6 +6,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Skills from './components/Skills';
 import Works from './components/Works';
+import Courses from './components/Courses';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Skills" element={<Skills />} />
         <Route path="/Works" element={<Works />} />
+        <Route path="/Courses" element={<Courses />} />
       </Routes>
     </BrowserRouter>
   );
