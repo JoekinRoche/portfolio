@@ -1,1 +1,1 @@
-Personal Portfolio created using ReactJS and TailwindCSS
+Personal Portfolio developed using ReactJS and TailwindCSS
