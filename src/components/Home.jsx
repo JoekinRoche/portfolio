@@ -7,10 +7,10 @@ const Home = () => {
   return (
     <div >
         <video src={BG} autoPlay loop muted ></video>
-        <div name='home' className='w-full h-screen home'>
+        {/* <div name='home' className='w-full h-screen home'> */}
         
       {/* Container */}
-      <div className='content d-flex flex-col justify-center h-full'>
+      <div className='content d-flex flex-col justify-center h-full home'>
         <div className="mt-[-10rem] mb-[2rem]">
         <Navbar/>
         </div>
@@ -38,7 +38,7 @@ const Home = () => {
       </div>
       </div>
       </div>
-    </div>
+    // </div>
   );
 };
 
